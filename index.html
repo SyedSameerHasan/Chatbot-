@@ -138,16 +138,15 @@
     </div>
   </section>
 
-  <!-- n8n Chatbot -->
-<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-
-<script type="module">
+  <script type="module">
   import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
   createChat({
-    webhookUrl: 'https://n8n.srv1536675.hstgr.cloud/webhook/9e43558a-20d7-4c2d-a046-6f7b913a19bc/chat',
+    webhookUrl: 'https://n8n.srv1536675.hstgr.cloud/webhook/9e43558a-20d7-4c2d-a046-6f7b913a19bc',
     mode: 'window',
     loadPreviousSession: false,
+    chatInputKey: 'chatInput',
+    chatSessionKey: 'sessionId',
     showWelcomeScreen: false,
     defaultLanguage: 'en',
     initialMessages: [
