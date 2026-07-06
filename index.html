@@ -138,26 +138,27 @@
     </div>
   </section>
 
-  <!-- n8n Chat Script -->
-  <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+  <!-- n8n Chatbot -->
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
-    createChat({
-      webhookUrl: 'https://n8n.srv1536675.hstgr.cloud/webhook/9e43558a-20d7-4c2d-a046-6f7b913a19bc/chat',
-      mode: 'window',
-      defaultLanguage: 'en',
-      showWelcomeScreen: false,
-      initialMessages: [
-        'Hi there! 👋 I am FlowerBouquet Assistant. I can help you find flowers, cakes, chocolates, and gift suggestions.'
-      ],
-      i18n: {
-        en: {
-          title: 'FlowerBouquet Assistant',
-          subtitle: 'Ask me for product suggestions',
-          inputPlaceholder: 'Type your question...'
-        }
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+  createChat({
+    webhookUrl: 'https://n8n.srv1536675.hstgr.cloud/webhook/9e43558a-20d7-4c2d-a046-6f7b913a19bc/chat',
+    mode: 'window',
+    loadPreviousSession: false,
+    showWelcomeScreen: false,
+    defaultLanguage: 'en',
+    initialMessages: [
+      'Hi there! 👋 I am FlowerBouquet Assistant. I can help you find flowers, cakes, chocolates, and gift suggestions.'
+    ],
+    i18n: {
+      en: {
+        title: 'FlowerBouquet Assistant',
+        subtitle: 'Ask me for product suggestions',
+        inputPlaceholder: 'Type your question here...'
       }
-    });
-  </script>
-</body>
-</html>
+    }
+  });
+</script>
